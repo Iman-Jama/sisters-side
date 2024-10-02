@@ -1,0 +1,203 @@
+.searchPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.welcome {
+  margin-bottom: 20px;
+}
+
+.searchFormContainer {
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(155, 155, 155, 0.5)), url('../../public/search-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchFormContainer h1 {
+  text-transform: capitalize;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  
+  /* width: 100%; */
+  max-width: 800px;
+  padding: 0 20px; /* Padding to avoid overflow on mobile */
+}
+
+.input {
+  flex: 1;
+  height: 60px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgb(246, 246, 246);
+  border: 1px solid #ccc;
+  border-right: none;
+  width: 500px; /* Full width */
+  /* max-width: 00px; */
+  color: black;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  box-sizing: border-box; /* Ensure padding and width are handled correctly */
+}
+
+.suggestionsContainer {
+  width: 100%;
+  max-width: 500px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.suggestion {
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.suggestionHighlighted {
+  background-color: #ddd;
+}
+
+.searchButton {
+  height: 60px;
+  padding: 10px 20px;
+  background-color: #CE503F;
+  color: #fff;
+  border: 1px solid #ff634f;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 150px;
+}
+
+.searchButton:hover {
+  background-color: #ff634f;
+}
+
+.mosqueCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+  padding: 5rem 4rem;
+}
+
+.mosqueCard {
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.mosqueCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mosqueName {
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.address {
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.mosqueImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.detailsButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #CE503F;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.starContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.starContainer svg {
+  color: #EBA424;
+}
+
+@media (max-width: 768px) {
+  .searchFormContainer {
+    height: auto; /* Adjust height for mobile */
+    padding: 80px 20px;
+  }
+
+  .searchForm {
+    flex-direction: column;
+    align-items: stretch; /* Ensure full width */
+    width: 100%; /* Full width */
+  }
+  .searchFormContainer h1 {
+   font-size: 20px;
+  }
+
+  .input {
+    width: 100%; /* Full width on mobile */
+    border-radius: 20px 20px 0 0;
+    border-right: 1px solid #ccc;
+  }
+
+  .suggestionsContainer {
+    max-width: 300px;
+  }
+
+
+  .searchButton {
+    border-radius: 0 0 20px 20px;
+    width: 100%; /* Full width on mobile */
+  }
+
+  .mosqueCards {
+    padding: 1rem; /* Adjust padding for mobile */
+  }
+}

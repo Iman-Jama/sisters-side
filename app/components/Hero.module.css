@@ -1,0 +1,56 @@
+.hero {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(155, 155, 155, 0.5)), url('../../public/hero-image-for-mawal.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+  
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20rem;
+}
+
+.heroTitle {
+    font-size: 54px;
+    font-family: Playfair;
+    text-transform: capitalize;
+}
+
+.heroSubTitle {
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 15px 25px;
+    background-color: #CE503F;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 0 20px 0 0;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+  
+.button:hover {
+    background-color: #ff8272;
+}
+
+@media (max-width: 1068px) {
+    .heroContent {
+        padding: 0 1rem;
+    }
+}

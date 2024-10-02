@@ -1,0 +1,153 @@
+/* Navbar.module.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent;
+    height: 60px;
+    z-index: 1000;
+    position: fixed;
+    top: 0; /* This is only for the nav bar itself */
+    left: 0;
+    right: 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: #d67366;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.hamburgerIcon {
+    color: white;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+}
+
+.navLinks a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/* Auth Links - Logged Out */
+.authLinks {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.login {
+    background-color: #CE503F;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.login:hover {
+    background-color: #ec7869;
+}
+
+.register {
+    border: 1px solid #CE503F;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Logged-In Menu Design */
+.loggedInMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcomeUser {
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.navLinks.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #f5f5f5;
+    z-index: 9;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .loggedInMenu {
+        flex-direction: column;
+    }
+
+    .welcomeUser {
+        color: black;
+    }
+
+    .navLinks {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        right: 0;
+        background-color: rgb(255, 255, 255);
+        height: 100vh;
+        justify-content: center;
+        z-index: 10;
+    }
+
+    .navLinks.open {
+        display: flex;
+        top: 0; /* Apply top positioning only on mobile */
+    }
+
+    .navLinks a {
+        color: black;
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .navLinks li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .authLinks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login, .register {
+        width: 80%;
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+}
